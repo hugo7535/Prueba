@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="/webjars/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.js"></script>
+<head>
+<meta charset="utf-8" />
+<title>Producto nuevo</title>
+<link rel="icon" href="vise.ico">
+</head>
+<body>
+    <div class="container" align="center">
+        <h1 style="text-align: center;">Crear nuevo producto</h1>
+        <hr>
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <form action="#" th:action="@{/save}" th:object="${producto}" method="post">
+                        <div class="form-group" style="width: 320px;">
+                            <p for="nombre">Nombre: <input type="text" id="nombre" class="form-control" th:field="*{nombre}"/></p>
+                        </div>
+                        <div class="form-group" style="width: 320px;">
+                            <p for="marca">Marca: <input type="text" id="marca" class="form-control" th:field="*{marca}" /></p>
+                        </div>
+                        <div class="form-group" style="width: 320px;">
+                            <p for="hechoEn">Hecho en: <input type="text" id="hechoEn" class="form-control" th:field="*{hechoEn}" /></p>                            
+                        </div>
+                        <div class="form-group" style="width: 320px;">
+                            <p for="precio">Precio: <input type="text" id="precio" class="form-control" th:field="*{precio}" /></p>
+                        </div>
+                        <br>
+                        <button class="button btn-success" type="submit">Guardar <span class="glyphicon glyphicon-floppy-disk"></span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
